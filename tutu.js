@@ -85,5 +85,65 @@ function add(a, b) {
     }
     return 0;
 }
-console.log(add(4, 5));
-
+console.log(add("4", 5));
+var index = 22;
+// let ondo:keke=
+function sayHi(message) {
+    console.log('hi');
+}
+var try1 = function (message) {
+    console.log(message);
+};
+try1("Hello!");
+var userDetails = {
+    name: 'fozi',
+    age: 22,
+    height: 911
+};
+var rudeus = {
+    chars: 'a',
+    mani: 599
+};
+var killMonger = {
+    power: 'fireBall',
+    damage: 44,
+    chars: 'xj',
+    mani: 44,
+    afterMath: '-22'
+};
+var gore = {
+    sheesh: 'hey',
+    chars: 'nonese'
+};
+var kempo = {
+    name: 12,
+    sheesh: 'ngo gute',
+    chars: 'harya ni hehe'
+};
+var buyButton = {
+    text: "Buy",
+    onClick: function () { return console.log("Buy"); },
+};
+var greenBuyButton = {
+    color: "Green",
+    text: "Buy",
+    onClick: function () { return console.log("Buy"); },
+};
+var log = function (message) {
+    console.log(message);
+};
+var eg = function (message) {
+    console.log(message);
+};
+eg('Coucou les cherie');
+var agex;
+agex = null;
+agex = undefined;
+console.log(age);
+var couleus;
+(function (couleus) {
+    couleus[couleus["left"] = 0] = "left";
+    couleus[couleus["right"] = 1] = "right";
+})(couleus || (couleus = {}));
+var test = couleus.right;
+console.log(test);

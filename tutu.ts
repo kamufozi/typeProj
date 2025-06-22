@@ -98,27 +98,193 @@ function add(a: unknown, b: unknown) {
 }
 console.log(add("4", 5));
 
-async function getData(path: string): Promise<unknown> {
-  const response = await fetch(path);
-  return await response.json();
+// async function getData(path: string): Promise<unknown> {
+//   const response = await fetch(path);
+//   return await response.json();
+// }
+
+// type Person = {
+//   id: string;
+//   name: string;
+// };
+// function isPerson(person: any): person is Person {
+//   return "id" in person && "name" in person;
+// }
+// async function getPerson(id: string): Promise<Person | null> {
+//   const person = await getData("/people/1");
+//   if (person) {
+//     return person;
+//   }
+//   return null;
+// }
+// let tue:[string,number];
+// tue=[29,'jellu']
+
+// enum Level{
+//   Low='L',
+//   Medium='M',
+//   High='H'
+// }
+// let level:Level=Level.High;
+// level='H';
+// console.log(level)
+
+type fozi=number|string
+type keke=number&string
+let index:fozi=22
+// let ondo:keke=
+function sayHi(message){
+  console.log('hi')
+}
+// type sayHey=(message:string)=>void
+
+// let try: sayHey=(message)=>{
+//   console.log(message)
+// }
+
+type sayHe = (message: string) => void
+
+let try1: sayHe = (message) => {
+  console.log(message)
 }
 
-type Person = {
-  id: string;
-  name: string;
+try1("Hello!")
+
+interface mamyake{
+  name:string
+  age:number
+}
+interface mamyake{
+  height:number
+}
+let userDetails:mamyake={
+  name:'fozi',
+  age:22,
+  height:911
+}
+type A={
+  chars:string
+}
+type B =A & {
+  mani:number
+}
+let rudeus:B={
+  chars:'a',
+  mani:599
+}
+interface fire{
+  power:string
+  damage:number
+}
+type C=fire&B&{afterMath:string}
+let killMonger:C={
+  power:'fireBall',
+  damage:44,
+  chars:'xj',
+  mani:44,
+  afterMath:'-22'
+}
+interface sakura extends A{
+  sheesh:string
+}
+let gore:sakura={
+  sheesh:'hey',
+  chars:'nonese'
+}
+interface mimi extends sakura{
+  name:number
+}
+let kempo:mimi={
+  name:12,
+  sheesh:'ngo gute',
+  chars:'harya ni hehe'
+}
+type name=number|string
+
+const buyButton: ButtonProps = {
+  text: "Buy",
+  onClick: () => console.log("Buy"),
 };
-function isPerson(person: any): person is Person {
-  return "id" in person && "name" in person;
+interface ButtonProps {
+  text: string;
+  onClick?: () => void;
+  optional?: string;
+  // hey: string;
 }
-async function getPerson(id: string): Promise<Person | null> {
-  const person = await getData("/people/1");
-  if (person) {
-    return person;
-  }
-  return null;
+interface ColoredButtonProps extends ButtonProps{
+  color: string
 }
-let tue:[string,number];
-tue=[29,'jellu'
-]
-
-let 
+const greenBuyButton: ColoredButtonProps = {
+  color: "Green",
+  text: "Buy",
+  onClick: () => console.log("Buy"),
+};
+const log = (message: string) => {
+  console.log(message);
+};
+interface log{
+  (message:string):void
+}
+let eg:log=(message:string)=>{
+  console.log(message)
+}
+eg('Coucou les cherie')
+type Uno= number | null |undefined;
+type Fruit='Banana'|'Apple'|'Pear'
+let agex:Uno;
+agex=null;
+agex=undefined
+console.log(age);
+enum couleus{
+  left,
+  right
+}
+let test:couleus=couleus.right
+console.log(test)
+type Name = {
+  firstName: string;
+  mobile: string;
+};
+type PhoneNumber = {
+  landline: string;
+  mobile: string;
+};
+type Contact = Name & PhoneNumber;
+let fred:Contact={
+  firstName:'fred',
+  mobile:'09',
+  landline:'00',
+  
+}
+type Email = {
+  emailAddress: string;
+};
+type BaseElement = {
+  name: string;
+  kind: "text" | "number" | "email";
+};
+type TextInput = {
+  kind: "number";
+};
+type Field = BaseElement & TextInput;
+const agfffe: Field = {
+  name: "Age",
+  kind: "number",
+};
+type AX = {
+  doIt: (a: string) => void;
+};
+type BX = {
+  doIt: (a: string, b: string) => void;
+};
+type AX_and_BX = AX & BX;
+const ab_v1: AX_and_BX = {
+  doIt: (a: string) => {},
+};
+// const ab_v2: AX_and_BX = {
+//   doIt: (a: string, b: string) => {},
+// };
+interface Names{
+  [index:number]:string;
+}
+let names:Names=['hi']
