@@ -288,3 +288,55 @@ interface Names{
   [index:number]:string;
 }
 let names:Names=['hi']
+let jones: "Tom" | "Bob" = "Tom";
+let jane: string = "Jane";
+jones = jane;
+type Person = {
+  name: string;
+  age: number;
+
+};
+interface IPerson {
+  name: string;
+}
+
+let bob: Person = {
+  name: "Bob",
+  age: 30,
+};
+let fredd: IPerson = {
+  name: "Fred",
+};
+
+// bob = fredd;
+const point = { x: 32, y: 77 };
+point.x=22
+point.y=33
+// point.z=33
+
+type ContactDetails = { name: string; email: string };
+let keys: keyof ContactDetails;
+
+
+type ReadonlyPartial<T>= {
+  readonly [K in keyof T]?: T[K]
+}
+type Userc = {
+  id: number;
+  name: string;
+};
+
+const user3: ReadonlyPartial<Userc> = {
+  id: 1,
+};
+type req={
+  name:string,
+  age?:number
+}
+function describePerson(person:req):string {
+  const agePart = person.age ? ` who is ${person.age} years old` : '';
+  return `${person.name}${agePart}`;
+}
+const user2 = { id: 1, username: "alice" };
+
+// describePerson(user2, 'username') should return a string
